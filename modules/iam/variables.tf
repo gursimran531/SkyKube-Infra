@@ -9,3 +9,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "voice_notes_bucket_arn" {
+  description = "The ARN of the SkyKube Voice Notes S3 bucket."
+  type        = string
+}
