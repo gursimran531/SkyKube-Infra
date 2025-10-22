@@ -51,7 +51,7 @@ resource "aws_apigatewayv2_integration" "voice_lambda_integration" {
   integration_type   = "AWS_PROXY"
   integration_uri    = aws_lambda_function.voice_lambda.invoke_arn
 
-  integration_method = "ANY"
+  integration_method = "POST"
   payload_format_version = "2.0"
 }
 

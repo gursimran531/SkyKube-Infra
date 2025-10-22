@@ -59,3 +59,19 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "aws_region" {
+  description = "The AWS region to deploy the EKS cluster."
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "vpc_id" {
+  description = "The ID of the VPC where the EKS cluster will be deployed."
+  type        = string
+}
+
+variable "eks_role" {
+  description = "The EKS role to depend on."
+  type        = any
+}

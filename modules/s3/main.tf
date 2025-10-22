@@ -26,3 +26,23 @@ resource "aws_s3_bucket_lifecycle_configuration" "voice_notes_lifecycle" {
     }
   } 
 }
+
+resource "aws_s3_bucket_cors_configuration" "voice_bucket_cors" {
+
+  bucket = aws_s3_bucket.voice_notes.id
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["PUT", "GET"]
+    allowed_origins = ["${var.frontend_url}"] 
+    expose_headers  = ["ETag"]
+    max_age_seconds = 3000
+  }
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["PUT", "GET"]
+    allowed_origins = ["http://localhost:*", "http://127.0.0.1:*"]
+    max_age_seconds = 3000
+  }
+}

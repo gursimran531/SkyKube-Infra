@@ -91,3 +91,9 @@ variable "subdomain" {
   type        = string
   default     = "dev"
 }
+
+variable "frontend_url" {
+  description = "The URL for the frontend application"
+  type        = string
+  default     = "http://dev.singhops.net"
+}

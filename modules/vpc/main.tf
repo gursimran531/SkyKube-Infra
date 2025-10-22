@@ -21,7 +21,8 @@ resource "aws_subnet" "public_subnets" {
   map_public_ip_on_launch = "true"
   tags = merge(
     {
-      Name = "SkyKube-PublicSubnet-${each.key}-${var.environment}"
+      "Name" = "SkyKube-PublicSubnet-${each.key}-${var.environment}",
+      "kubernetes.io/role/elb" = "1"
     },
     var.tags
   )

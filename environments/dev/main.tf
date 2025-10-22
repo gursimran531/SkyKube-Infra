@@ -40,8 +40,10 @@ module "eks" {
   max_size           = var.max_size
   min_size           = var.min_size
   tags               = local.common_tags
+  vpc_id             = module.vpc.vpc_id
+  aws_region         = var.region
+  eks_role           = module.iam.eks-cluster-role
 
-  depends_on = [module.iam]
 }
 
 module "dns" {
@@ -56,7 +58,7 @@ module "dns" {
 
 module "s3" {
   source = "../../modules/s3"
-
+  frontend_url = var.frontend_url
   tags = local.common_tags
 }
 
