@@ -61,7 +61,7 @@ The SkyKube infrastructure is designed to be **secure, scalable, and modular**. 
 
 ## Diagram
 
-> ![SkyKube Architecture](./diagram/SkyKube.drawio.png)
+> ![SkyKube Architecture](./diagram/SkyKube.drawio.svg)
 
 
 ---
