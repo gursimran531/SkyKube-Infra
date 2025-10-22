@@ -151,3 +151,10 @@ SkyKube-Infra/
 - Security is layered: VPC subnets, IAM roles, CloudFront, and presigned URLs.
 
 - Once the infrastructure is created, you’ll need to deploy the application so that the ALB (Application Load Balancer) is provisioned. After that, you can use the ALB’s DNS name when setting up CloudFront to ensure proper routing. I also encountered a few issues related to security group configurations during this process that I had to manually allow traffic from alb sg to node group sg — any suggestions or improvements would be greatly appreciated.
+
+---
+
+## 👤 Author
+**Gursimran Singh**  
+AWS Certified Cloud & DevOps Engineer  
+📧 [LinkedIn Profile](https://www.linkedin.com/in/gursimran-singh-269ba5224/)
